@@ -1,0 +1,32 @@
+﻿<Window x:Class="PRAKTIKA4entity.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRAKTIKA4entity"
+        mc:Ignorable="d"
+        Title="Ticket" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="271*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="73*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <Button Content="ПОИСК" x:Name="SearchClick" HorizontalAlignment="Left" Margin="293,10,0,0" VerticalAlignment="Top" Height="37" Width="82" Click="SearchClick_Click" Grid.Column="1"/>
+        <Button Content="ОЧИСТИТЬ" x:Name="ClearClick" HorizontalAlignment="Left" Margin="293,12,0,0" VerticalAlignment="Top" Height="40" Width="82" Click="ClearClick_Click" Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="SearchClass" HorizontalAlignment="Left" Margin="55,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="602" Height="37" Grid.ColumnSpan="2"/>
+        <ComboBox DisplayMemberPath="Class" x:Name="FiltrClass" HorizontalAlignment="Left" Margin="55,12,0,0" VerticalAlignment="Top" Width="602" Height="40" SelectionChanged="FiltrName_SelectionChanged" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="TicketGrid" Margin="200,67,200,14" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button Content="Passenger" x:Name="TicketClick" HorizontalAlignment="Center" Margin="0,32,0,0" VerticalAlignment="Top" Height="30" Width="168" Click="Button_Click" Grid.Row="5"/>
+
+    </Grid>
+</Window>
